@@ -3,6 +3,7 @@
     "GrpcService": {
       "commandName": "Project",
       "launchBrowser": false,
+      "applicationUrl": "https://raspberrypi:5001",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
