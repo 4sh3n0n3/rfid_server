@@ -1,0 +1,65 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcService";
+
+package pacs;
+
+// The greeting service definition.
+service PACS {
+  // Sends a greeting
+  rpc CreateUser (NewUserRequest) returns (NewUserReply) {};
+  rpc RewriteUser (RewriteUserRequest) returns (RewriteUserReply) {};
+  rpc DeleteUser (DeleteUserRequest) returns (DeleteUserReply) {};
+  rpc ShowHistory (ShowHistoryRequest) returns (stream ShowHistoryReply) {};
+  rpc ShowAllowed (ShowAllowedRequest) returns (stream ShowAllowedReply) {};
+}
+
+// The request message containing the user's name.
+message NewUserRequest {
+  string newuserfullname = 1;
+}
+
+// The response message containing the greetings.
+message NewUserReply {
+  string newuserresponse = 1;
+}
+
+message RewriteUserRequest {
+  string rewriteuserfullname = 1;
+}
+
+// The response message containing the greetings.
+message RewriteUserReply {
+  string rewriteresponse = 1;
+}
+
+message DeleteUserRequest {
+  string deleteuserid = 1;
+}
+
+// The response message containing the greetings.
+message DeleteUserReply {
+  string deleteresponse = 1;
+}
+
+message ShowHistoryRequest {
+  string showhistorydate = 1;
+}
+
+// The response message containing the greetings.
+message ShowHistoryReply {
+  string showhistoryid = 1;
+  string date = 2;
+  string showhistorytext = 3;
+  bool allowed = 4;
+}
+
+message ShowAllowedRequest{
+
+}
+
+
+message ShowAllowedReply{
+    string showallowedresponseid = 1;
+    string fullname = 2;
+}

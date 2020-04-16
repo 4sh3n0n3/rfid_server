@@ -1,0 +1,2 @@
+obj\Release\netcoreapp3.1/Pacs.cs \
+obj\Release\netcoreapp3.1/PacsGrpc.cs: Protos/pacs.proto
