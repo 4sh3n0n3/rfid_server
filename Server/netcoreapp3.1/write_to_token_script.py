@@ -2,6 +2,7 @@
 #!/usr/bin/env python
 
 import RPi.GPIO as GPIO
+import sys
 from shell_scripts import *
 from sql_requests import  *
 from private_scripts import *
@@ -24,3 +25,5 @@ def write_to_token(text):
         GPIO.cleanup()
         return response
 
+
+write_to_token(sys.args[1])

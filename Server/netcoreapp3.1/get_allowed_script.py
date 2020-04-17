@@ -9,3 +9,4 @@ def get_allowed_ids():
     response = cursor.execute("SELECT * FROM allowed_ids").fetchall()
     return response
 
+get_allowed_ids()

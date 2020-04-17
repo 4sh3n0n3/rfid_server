@@ -2,6 +2,7 @@
 #!/usr/bin/env python
 
 import sqlite3
+import sys
 import RPi.GPIO as GPIO
 from mfrc522 import SimpleMFRC522
 from sql_requests import *
@@ -27,3 +28,5 @@ def add_allowed(text):
         GPIO.cleanup()
         return response
 
+
+add_allowed(sys.args[1])
