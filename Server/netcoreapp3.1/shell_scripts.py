@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python
 
 KILL_TASK_READER =  "pgrep -f 'python rfid_reader\.py*' | xargs kill"
